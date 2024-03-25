@@ -1,0 +1,24 @@
+body{
+    background-color: #17c1c6bd;
+}
+.menu{
+    background-color: #08debe;
+    height: 50px;
+    text-align: right;
+}
+.menu a{
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    background-color: #0d5acea1;
+    color: white;
+}
+.menu a:hover{
+    background-color: #0d5ace;
+}
+h1{
+    text-align: center;
+}
