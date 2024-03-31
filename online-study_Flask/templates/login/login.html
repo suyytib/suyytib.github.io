@@ -1,0 +1,58 @@
+{% extends 'base.html' %} {% block title %} 登录 {% endblock %} {% block head %}
+<script src="../../static/js/code.js"></script>
+<link rel="stylesheet" type="text/css" href="../../static/css/code.css" />
+<link rel="stylesheet" href="../../static/css/root.css" />
+
+<link rel="stylesheet" href="../../static/css/bootstart/bootstrap.min.css" />
+<link rel="stylesheet" href="../../static/css/bootstart/bootstrap.css" />
+<link rel="stylesheet" href="../../static/css/bootstart/bootstrap-grid.css" />
+<link rel="stylesheet" href="../../static/css/bootstart/bootstrap-grid.rtl.css" />
+{% endblock %} {% block body %}
+<div class="py-xl bg-cover bg-size--cover" style="background-image: url('../../static/image/w1.jpg');"><!--bg-size--cover 背景覆盖--><!--bg-cover 相对于他原本的位置定位--><!--py-xl 顶部底部pad-->
+  <div class="container">
+    <div class="col"><!--col 元素内部的每一列的列属性-->
+      <div class="row justify-content-center"><!--justify-content-center 内容居中--><!--row 元素布局-->
+        <div class="col-lg-4"><!--col-lg-4 元素内部的每一列布局-->
+          <div class="card bg-info text-white"><!--text-white 白色纯文本--><!--bg-info 背景蓝颜色--><!--card 可扩展内部容器-->
+            <div class="card-body"><!--card-body 卡片主体-->
+              <h4 class="h3 text-white pt-3 pb-5">用户登录</h4><!--pt-3 顶部pad--><!--pb-5 底部pad-->
+              <form action="{{url_for('login.login')}}" method="post">
+                <div class="form-group"><!--form-group 下边距-->
+                  <label>用户名:</label>
+                  <input type="text" name="user_name" class="form-control" placeholder="请输入用户名" /><!--form-control 控件设置-->
+                </div>
+                <div class="form-group">
+                  <label>密码:</label>
+                  <input type="password" name="user_passwd" placeholder="请输入密码" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <label>验证码：</label>
+                  <input type="text" name="temp_password" id="input1" placeholder="请输入验证码" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <input type="text" id="checkCode" class="code form-control" style="width: 100px" />
+                  <a href="#" onclick="createCode();" class="btn btn-block btn-lg bg-white mt-4">看不清楚</a>
+                </div><!--bg-white 白背景--><!--mt-4 外边距--><!--btn 圆角按钮--><!--btn-lg 大按钮--><!--btn-block 块级按钮-->
+                <div class="form-group">
+                  <button onclick="validate();" type="text" id="myButton" name="quedin"
+                    class="btn btn-block btn-lg bg-white mt-4">
+                    确定
+                  </button>
+                  <a href="{{url_for('root.root')}}" class="btn btn-block btn-lg bg-white mt-4">取消</a>
+                  <!--<input onclick="history.back(-1);" type="button" class="btn btn-block btn-lg bg-white mt-4"
+                    value="取消" />-->
+                </div>
+                <div class="form-group">
+                  <p style="color: red">
+                    {% if is_error %} 用户错误! {% endif %}
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

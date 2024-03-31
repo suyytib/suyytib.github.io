@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+抽奖
+{% endblock %}
+
+
+{% block head %}
+<!-- 加载注册用的js代码 -->
+<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+<script src="../../static/js/choujiang.js"></script>
+
+<link rel="stylesheet" href="../../static/css/bootstart/bootstrap.min.css" />
+<link rel="stylesheet" href="../../static/css/bootstart/bootstrap.css" />
+<link rel="stylesheet" href="../../static/css/bootstart/bootstrap-grid.css" />
+<link rel="stylesheet" href="../../static/css/bootstart/bootstrap-grid.rtl.css" />
+{% endblock %}
+
+{% block body%}
+<div>
+    <input type="text" id="anseron" class="code form-control"/>
+    <a href="#" onclick="choujiang();" class="btn btn-block btn-lg bg-white mt-4">开始抽奖</a>
+</div>
+{% endblock %}

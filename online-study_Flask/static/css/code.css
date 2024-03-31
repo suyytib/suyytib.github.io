@@ -1,0 +1,22 @@
+.code {
+  background-color: aqua;
+  font-family: Arial;
+  font-style: italic;
+  color: Red;
+  border: 0;
+  padding: 2px 3px;
+  letter-spacing: 3px;
+  font-weight: bolder;
+  pointer-events: none;
+}
+.py-xl {
+  padding-bottom: 8rem !important;
+  padding-top: 8rem !important;
+}
+.bg-size--cover{
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg-cover{
+  position: relative;
+}

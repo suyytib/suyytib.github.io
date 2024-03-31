@@ -1,0 +1,52 @@
+{% extends 'base.html' %} {% block title %} 懒人tool {% endblock %} {% block
+head %}
+<!-- 定义主页背景色的CSS样式 -->
+<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+<script src="../../static/js/bootstrap.bundle.min.js"></script>
+
+<link rel="stylesheet" href="../../static/css/root.css" />
+<link rel="stylesheet" href="../../static/css/bootstart/bootstrap.css" />
+<link rel="stylesheet" href="../../static/css/bootstart/bootstrap.min.css" />
+<link rel="stylesheet" href="../../static/css/bootstart/bootstrap-grid.css" />
+<link rel="stylesheet" href="../../static/css/bootstart/bootstrap-grid.rtl.css" />
+<link rel="stylesheet" href="../../static/css/bootstart/bootstrap-reboot.min.css" />
+<link rel="stylesheet" href="../../static/css/bootstart/bootstrap-utilities.css" />
+{% endblock %} {% block body%}
+<nav class="navbar navbar-expand-lg navbar-transparent navbar-dark bg-dark py-4">
+    <!--py-4 填充导航条顶部底部--><!--bg-dark 设置透明度--><!--navbar-dark 导航每个元素字体的颜色--><!--navbar-expand-lg 导航行或列及对齐形式--><!--navbar-transparent 导航整体设置--><!--navbar 导航边框设置-->
+    <div class="container"><!--container 容器设置-->
+        <h1 class="navbar-brand">欢迎来到懒人tool!</h1><!--navbar-brand 导航纯文本设计-->
+        <div class="navbar-collapse offcanvas-collapse"><!--offcanvas-collapse 侧边滑动导航 --><!--navbar-collapse 折叠导航 -->
+            <ul class="navbar-nav ml-auto align-items-lg-center">
+                <!--align-items-lg-center 在其网格区域内的块向轴上的中心对齐 --><!--ml-auto 元素居右 --><!--navbar-nav 列表整体设计 -->
+                <li class="nav-item dropdown"><!--dropdown 下拉菜单--><!--nav-item 元素设置-->
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="false"
+                        aria-expanded="false">工具栏</a><!--show js处理，隐藏元素--><!--aria-expanded 展开状态--><!--data-bs-toggle 触发事件--><!--dropdown-toggle 切换按钮-->
+                    <ul class="dropdown-menu"><!--dropdown-menu 下拉菜单设计-->
+                        <li>
+                            <a class="dropdown-item" href="{{url_for('root.choujiang')}}">抽奖</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{url_for('root.choujiang')}}">抽奖</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{url_for('root.choujiang')}}">抽奖</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{url_for('root.choujiang')}}">抽奖</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><!--nav-item 元素设置--><!--active 元素背景设置-->
+                    <a href="{{url_for('login.login')}}" class="nav-link">登录</a><!--nav-link 元素名字设置-->
+                </li>
+                <li class="nav-item">
+                    <a href="{{url_for('login.register')}}" class="nav-link">注册</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="menu">
+</div>
+{% endblock %}
